@@ -221,70 +221,30 @@
              </div>
           
 
-             <div class="card">
-               
-                <div class="row">
-                    
-                    <div class="col-2">
-                        
-                        
-                        <img src="https://i.imgur.com/xELPaag.jpg" width="70" class="rounded-circle mt-2">
-                    
-                    
-                    </div>
-                    
-                    <div class="col-10">
-                        
-                        <div class="comment-box ml-2">
-                            
-                            <h4>Add a comment</h4>
-                            
-                            <div class="rating"> 
-                                <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label>
-                                <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label> 
-                                <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label>
-                                <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label>
-                                <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
-                            </div>
-                            
-                            <div class="comment-area">
-                                
-                                <textarea class="form-control" placeholder="what is your view?" rows="4"></textarea>
-                            
-                            </div>
-                            
-                            <div class="comment-btns mt-2">
-                                
-                                <div class="row">
-                                    
-                                    <div class="col-6">
-                                        
-                                        <div class="pull-left">
-                                        
-                                        <button class="btn btn-success btn-sm">Cancel</button>      
-                                            
-                                        </div>
-                                    
-                                    </div>
-                                    
-                                    <div class="col-6">
-                                        
-                                        <div class="pull-right">
-                                        
-                                        <button class="btn btn-success send btn-sm">Send <i class="fa fa-long-arrow-right ml-1"></i></button>      
-                                            
-                                        </div>
-                                    
-                                    </div>
-                                
-                                </div>
-                            
-                            </div>
-                        
-                        
-                        </div>
-                    
-                    </div>
+             
+                     
+             <div class="review-container">
+              <h2>How did it turn out?</h2>
+              <div class="comment-form">
+                <input class="review-input" type="text" id="usernameInput" placeholder="Your name">
+                <textarea id="commentInput" placeholder="Type here to leave a review or ask a question.."></textarea>
+                <div class="rating">
+                  <span>Your rating: </span>
+                  <span id="ratingValue">0</span>/5
+                  <span id="stars">
+                    <i class="fas fa-star" data-index="1"></i>
+                    <i class="fas fa-star" data-index="2"></i>
+                    <i class="fas fa-star" data-index="3"></i>
+                    <i class="fas fa-star" data-index="4"></i>
+                    <i class="fas fa-star" data-index="5"></i>
+                  </span>
+                </div>
+                <button class="review-button" onclick="postReview()">Post Review</button>
+              </div>
+              <div id="reviews" class="reviews">
+                <!-- Reviews will be dynamically added here -->
+              </div>
+            </div>
                 
                 
                 </div>
@@ -306,14 +266,14 @@
                   <div class="footer-nav">
                    
                     <ul>
-                    <li><a href="https://pinchofyum.com/about">About</a></li>
-                    <li><a href="https://pinchofyum.com/blog">Blog</a></li>
-                    <li><a href="https://pinchofyum.com/recipes">Recipe Index</a></li>
-                    <li><a href="https://pinchofyum.com/resources">Blogging Resources</a></li>
-                    <li><a href="https://pinchofyum.com/category/making-money-from-a-food-blog">Income Reports</a></li>
-                    <li><a href="https://pinchofyum.com/sponsored-content">Sponsored Content</a></li>
-                    <li><a href="https://pinchofyum.com/media-mentions">Media Mentions</a></li>
-                    <li><a href="https://pinchofyum.com/contact">Contact</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Recipe Index</a></li>
+                    <li><a href="#">Blogging Resources</a></li>
+                    <li><a href="#">Income Reports</a></li>
+                    <li><a href="#">Sponsored Content</a></li>
+                    <li><a href="#">Media Mentions</a></li>
+                    <li><a href="#">Contact</a></li>
                     </ul>
                        </div>
                        
@@ -324,14 +284,14 @@
                         <div class="footer-nav">
                          
                           <ul>
-                          <li><a href="https://pinchofyum.com/about">About</a></li>
-                          <li><a href="https://pinchofyum.com/blog">Blog</a></li>
-                          <li><a href="https://pinchofyum.com/recipes">Recipe Index</a></li>
-                          <li><a href="https://pinchofyum.com/resources">Blogging Resources</a></li>
-                          <li><a href="https://pinchofyum.com/category/making-money-from-a-food-blog">Income Reports</a></li>
-                          <li><a href="https://pinchofyum.com/sponsored-content">Sponsored Content</a></li>
-                          <li><a href="https://pinchofyum.com/media-mentions">Media Mentions</a></li>
-                          <li><a href="https://pinchofyum.com/contact">Contact</a></li>
+                          <li><a href="#">About</a></li>
+                          <li><a href="#">Blog</a></li>
+                          <li><a href="#">Recipe Index</a></li>
+                          <li><a href="#">Blogging Resources</a></li>
+                          <li><a href="#">Income Reports</a></li>
+                          <li><a href="#">Sponsored Content</a></li>
+                          <li><a href="#">Media Mentions</a></li>
+                          <li><a href="#">Contact</a></li>
                           </ul>
                              </div>
                              
@@ -372,7 +332,7 @@
                 
                 
                 <div class="footer-print">
-                  <p class="text-xs mb-0">© 2024 Pinch of Yum. All Rights Reserved.</p>
+                  <p class="text-xs mb-0">© 2024 The Baking Flower. All Rights Reserved.</p>
                   <p class="text-xs mb-0">A Raptive Partner Site.</p>
                   </div>
               </div>

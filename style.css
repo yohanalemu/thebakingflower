@@ -756,95 +756,88 @@ input[type=checkbox]:checked + label {
 
 
 
-
-
-
-.card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-    padding: 20px;
-    width: 450px;
-    word-wrap: break-word;
-    background-color: #fff;
-    background-clip: border-box;
-    border-radius: 6px;
-    box-shadow: 0px 0px 5px 0px rgb(246, 183, 218)
+.review-container {
+  width: 50%;
+  margin:auto;
+  margin-top:50px;
+  background-color: #F9F5F6;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.comment-box{
-    
-    padding:5px;
+h2 {
+  text-align: center;
 }
 
-
-
-.comment-area textarea{
-   resize: none; 
-        border: 1px solid #ad9f9f;
+.comment-form {
+  margin-bottom: 20px;
 }
 
-
-.form-control:focus {
-    color: #495057;
-    background-color: #fff;
-    border-color: #ffffff;
-    outline: 0;
-    box-shadow: 0 0 0 1px pink !important;
+.review-input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
 }
-
-.send {
-    color: #fff;
-    background-color: rgb(233, 143, 192);
-    border-color:pink;
-}
-
-.send:hover {
-    color: #fff;
-    background-color: pink;
-    
-}
-
 
 .rating {
- display: flex;
-        margin-top: -10px;
-    flex-direction: row-reverse;
-    margin-left: -4px;
-        float: left;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
 }
 
-.rating>input {
-    display: none
+#stars {
+  margin-left: 10px;
 }
 
-.rating>label {
-        position: relative;
-    width: 19px;
-    font-size: 25px;
-    color: pink;
-    cursor: pointer;
+.fa-star {
+  font-size: 24px;
+  color: #ffc107;
+  cursor: pointer;
 }
 
-.rating>label::before {
-    content: "\2605";
-    position: absolute;
-    opacity: 0
+.fa-star:hover,
+.fa-star.active {
+  color: #ff9800;
 }
 
-.rating>label:hover:before,
-.rating>label:hover~label:before {
-    opacity: 1 !important
+.review-button {
+  background-color: rgb(233, 143, 192);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
 }
 
-.rating>input:checked~label:before {
-    opacity: 1
+.review-button:hover {
+  background-color: #45a049;
 }
 
-.rating:hover>input:checked~label:before {
-    opacity: 0.4
+.review {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  border: 1px solid #ccc;
 }
+
+.review p {
+  margin: 0;
+  
+}
+
+.review .info {
+  font-size: 14px;
+  color: #F2BED1;
+}
+
+
 
 .grid-container-recipe-link{
   display:grid;

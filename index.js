@@ -65,4 +65,74 @@ loadMoreBtn.onclick = () =>{
         }
       }
     }
+  
+    
+    
+function postReview() {
+  var usernameInput = document.getElementById('usernameInput');
+  var commentInput = document.getElementById('commentInput');
+  var username = usernameInput.value.trim();
+  var commentText = commentInput.value.trim();
+  var rating = parseInt(document.getElementById('ratingValue').textContent);
+
+  if (username === '') {
+    alert('Please enter your name.');
+    return;
+  }
+
+  if (commentText === '') {
+    alert('Please enter your review.');
+    return;
+  }
+
+  if (rating === 0) {
+    alert('Please select a rating.');
+    return;
+  }
+
+  var reviewElement = document.createElement('div');
+  reviewElement.classList.add('review');
+  reviewElement.innerHTML = `
+    <p>${commentText}</p>
+    <div class="rating">Rating: ${rating}/5</div>
+    <div class="info">Posted by ${username} on ${getCurrentDate()}</div>
+  `;
+
+  var reviewsContainer = document.getElementById('reviews');
+  reviewsContainer.prepend(reviewElement);
+
+  // Reset input fields
+  usernameInput.value = '';
+  commentInput.value = '';
+  document.getElementById('ratingValue').textContent = '0';
+  resetStars();
+}
+
+function getCurrentDate() {
+  var today = new Date();
+  var dd = String(today.getDate()).padStart(2, '0');
+  var mm = String(today.getMonth() + 1).padStart(2, '0');
+  var yyyy = today.getFullYear();
+  return mm + '/' + dd + '/' + yyyy;
+}
+
+let stars = document.querySelectorAll('#stars .fa-star');
+
+stars.forEach(function(star) {
+  star.addEventListener('click', function() {
+    let index = parseInt(star.getAttribute('data-index'));
+    document.getElementById('ratingValue').textContent = index;
+    resetStars();
+    for (let i = 0; i < index; i++) {
+      stars[i].classList.add('active');
+    }
+  });
+});
+
+function resetStars() {
+  stars.forEach(function(star) {
+    star.classList.remove('active');
+  });
+}
+
     
