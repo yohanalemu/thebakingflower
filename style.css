@@ -61,6 +61,10 @@
     top:0;
     z-index: 2;
   }
+  .navbar a{
+    text-decoration: none;
+    color:black;
+  }
   .navbar-links {
     height: 100%;
 }
@@ -228,16 +232,19 @@ padding-bottom:5px;
   height:400px;
  }
  .card1-img{
-  float:left;
-  height: auto;
 	width:40%;
-  background-size: cover;
+  object-fit: cover;
+  height:60vh;
  }
  .card-textbox{
-  float:right;
- padding:50px 0 50px 0;
+ float:right;
+ padding:50px 0;
  width:60%;
- 
+
+ }
+ .card-textbox p{
+  padding:0 50px;
+  font-size: 1.2vw;
  }
 
  .card-title{
@@ -261,7 +268,12 @@ padding-bottom:5px;
     margin-right:auto;
     
 }
-
+.card-button:hover{
+  background-color:#FFE6E6;
+}
+.card-button:active{
+  transition: .2s;
+}
 .card-button-link{
   text-decoration:none;
   color: #2A2B2A;
@@ -892,8 +904,15 @@ textarea {
   width:100%;
 }
 
+@media (max-width:992px){
+  .card-textbox p{
+    font-size:.8rem;
+  }
+
+}
 
   @media (max-width:600px){
+
     .grid-container{
       grid-template-columns:1fr;
       grid-template-rows:.2fr .2fr .2fr .2fr .2fr .2fr .2fr;
@@ -939,6 +958,7 @@ textarea {
      flex-flow: row wrap;
     }
 
+
     .recipe-img img{
       height: 300px;
       width: 200px;
@@ -956,16 +976,17 @@ textarea {
     height: 100%;
    }
    .card1-img{
-    background-size:cover;
-    height: auto;
+    height: 30vh;
     width: 100%;
  
    }
    .card-textbox{
-    font-size:1rem;
+  
     padding:20px 0 20px 0;
     width:100%;
-   
+  }
+  .card-textbox p{
+    font-size: 1rem;
   }
 
   .latest-recipes{
